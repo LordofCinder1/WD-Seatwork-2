@@ -71,3 +71,82 @@ body {
   box-shadow: 0 0 20px #00e0ff60;
   border-color: #00e0ff60;
 }
+.brand-button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+/* Fix the staggered layout */
+.brand-button-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.top-row {
+  justify-content: center;
+}
+
+.bottom-row {
+  justify-content: center;
+  transform: translateX(4rem);
+}
+
+/* SQUID GAME SHAPES BUTTON */
+.squid-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.75rem 2rem;
+  background: #1a1a1a;
+  border: 2px solid #ffffff20;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #ffffff20;
+  text-decoration: none;
+}
+
+.squid-button:hover {
+  transform: scale(1.05);
+  background: #2a2a2a;
+  box-shadow: 0 0 20px #ff005560;
+  border-color: #ff005580;
+}
+
+/* SHAPE BASE */
+.shape {
+  display: inline-block;
+  background: none;
+}
+
+/* CIRCLE */
+.shape.circle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ff0055;
+  border-radius: 50%;
+}
+
+/* TRIANGLE */
+.shape.triangle {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 17px solid #ff0055;
+}
+
+/* SQUARE (fixed) */
+.shape.square {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ff0055;
+}
