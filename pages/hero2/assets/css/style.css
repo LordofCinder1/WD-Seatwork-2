@@ -1,0 +1,194 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0d0d0d;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem 5% 4rem 5%;
+  gap: 3rem;
+  flex-wrap: wrap;
+  background: url('/assets/img/1177239.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* BRAND SHAPES */
+.brand-shapes {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.shape {
+  width: 35px;
+  height: 35px;
+  border: 3px solid #ff0066;
+  background: none;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+/* Triangle */
+.triangle {
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: 17.5px solid transparent;
+  border-right: 17.5px solid transparent;
+  border-bottom: 30px solid #ff0066;
+  margin-top: 2px;
+}
+
+/* Circle */
+.circle {
+  border-radius: 50%;
+}
+
+/* Hover Animations */
+.brand-shapes:hover .shape:not(.triangle) {
+  animation: twitch 0.8s ease-in-out infinite;
+}
+
+.brand-shapes:hover .triangle {
+  animation: twitch-vert 0.8s ease-in-out infinite;
+}
+
+@keyframes twitch {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(4px); }
+  50%  { transform: translateX(-4px); }
+  75%  { transform: translateX(2px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes twitch-vert {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateY(2px); }
+  50%  { transform: translateY(-2px); }
+  75%  { transform: translateY(1px); }
+  100% { transform: translateY(0); }
+}
+
+/* TEXT LEFT */
+.hero-left {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ff0066;
+}
+
+.hero-left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+
+/* BLOODY BUTTON */
+.btn-blood {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: #ff0066;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s, transform 0.2s;
+  z-index: 1;
+}
+
+.btn-blood::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: url('/assets/img/[CITYPNG.COM]HD Drop Of Blood Splat Clipart Vector PNG - 3000x3000.png') no-repeat center center;
+  background-size: cover;
+  opacity: 0.6;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.btn-blood:hover {
+  background: #a90036;
+  color: white;
+  transform: scale(1.05);
+}
+
+.btn-blood:hover::after {
+  width: 160px;
+  height: 160px;
+}
+
+/* IMAGE RIGHT */
+.hero-right img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+  
+}
+
+.hero-left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #ddd;
+
+  /* 🔥 FADE IN ANIMATION */
+  opacity: 0;
+  animation: fadeInDesc 1.5s ease-out 0.5s forwards;
+}
+
+@keyframes fadeInDesc {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
