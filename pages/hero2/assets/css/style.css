@@ -1,4 +1,3 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -72,12 +71,10 @@ body {
   margin-top: 2px;
 }
 
-/* Circle */
 .circle {
   border-radius: 50%;
 }
 
-/* Hover Animations */
 .brand-shapes:hover .shape:not(.triangle) {
   animation: twitch 0.8s ease-in-out infinite;
 }
@@ -102,7 +99,6 @@ body {
   100% { transform: translateY(0); }
 }
 
-/* TEXT LEFT */
 .hero-left {
   flex: 1;
   min-width: 280px;
@@ -122,7 +118,6 @@ body {
   color: #ddd;
 }
 
-/* BLOODY BUTTON */
 .btn-blood {
   display: inline-block;
   padding: 0.75rem 2rem;
@@ -177,7 +172,6 @@ body {
   margin-bottom: 2rem;
   color: #ddd;
 
-  /* 🔥 FADE IN ANIMATION */
   opacity: 0;
   animation: fadeInDesc 1.5s ease-out 0.5s forwards;
 }
