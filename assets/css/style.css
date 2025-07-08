@@ -77,7 +77,7 @@ body {
   gap: 1rem;
   flex-wrap: wrap;
 }
-/* Fix the staggered layout */
+
 .brand-button-grid {
   display: flex;
   flex-direction: column;
@@ -99,7 +99,6 @@ body {
   transform: translateX(4rem);
 }
 
-/* SQUID GAME SHAPES BUTTON */
 .squid-button {
   display: flex;
   align-items: center;
@@ -121,13 +120,12 @@ body {
   border-color: #ff005580;
 }
 
-/* SHAPE BASE */
 .shape {
   display: inline-block;
   background: none;
 }
 
-/* CIRCLE */
+
 .shape.circle {
   width: 20px;
   height: 20px;
@@ -135,7 +133,7 @@ body {
   border-radius: 50%;
 }
 
-/* TRIANGLE */
+
 .shape.triangle {
   width: 0;
   height: 0;
@@ -144,9 +142,57 @@ body {
   border-bottom: 17px solid #ff0055;
 }
 
-/* SQUARE (fixed) */
+
 .shape.square {
   width: 20px;
   height: 20px;
   border: 2px solid #ff0055;
+}
+
+.soniqcore-button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-shadow: 0 0 10px #00ffe5;
+  border-color: #00ffe540;
+  box-shadow: 0 0 10px #00ffe540;
+  position: relative;
+}
+
+.soniqcore-button span {
+  color: #00ffe5;
+}
+
+.soniqcore-button .mini-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 20px;
+}
+
+.soniqcore-button .mini-bars .bar {
+  width: 3px;
+  height: 8px;
+  background: #00ffe5;
+  border-radius: 1px;
+  opacity: 0.4;
+  animation: none;
+}
+
+.soniqcore-button:hover {
+  transform: scale(1.05);
+  background: #2a2a2a;
+  box-shadow: 0 0 25px #00ffe580;
+  border-color: #00ffe580;
+}
+
+.soniqcore-button:hover .bar {
+  animation: pulseBar 1.5s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.1s);
+  opacity: 1;
+}
+
+@keyframes pulseBar {
+  0%, 100% { height: 8px; }
+  50%      { height: 18px; }
 }
