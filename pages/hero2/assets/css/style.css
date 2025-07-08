@@ -19,7 +19,7 @@ body {
   padding: 6rem 5% 4rem 5%;
   gap: 3rem;
   flex-wrap: wrap;
-  background: url('/assets/img/1177239.jpg') no-repeat center center;
+  background: url('assets/img/1177239.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   z-index: 1;
