@@ -186,6 +186,7 @@ body {
   50%      { height: 18px; }
 }
 
+/* STUDIONOVA BUTTON */
 .studionova-button {
   position: relative;
   display: inline-block;
@@ -204,7 +205,6 @@ body {
   box-shadow: 0 0 10px #61dafb50;
 }
 
-/* STUDIONOVA BUTTON */
 .studionova-button::after {
   content: '';
   position: absolute;
@@ -230,3 +230,50 @@ body {
   width: 100%;
 }
 
+/* SPACEEDU BUTTON (GOLD) */
+.spaceedu-button {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
+  color: #f9c74f;
+  text-decoration: none;
+  border: 2px solid #f9c74f;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #f9c74f50;
+  position: relative;
+}
+
+.spaceedu-button .rocket-icon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px #f9c74f);
+  transition: transform 0.3s ease;
+}
+
+.spaceedu-button .logo-text {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.spaceedu-button .logo-text span {
+  color: #ffda7f;
+}
+
+.spaceedu-button:hover {
+  background: #2a2a2a;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #f9c74f80;
+  border-color: #f9c74f80;
+}
+
+.spaceedu-button:hover .rocket-icon {
+  transform: rotate(-15deg) scale(1.1);
+}
